@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.countDepthIncreases = void 0;
+const fs_1 = require("fs");
+let puzzleInput = (0, fs_1.readFileSync)(__dirname + '/../../data/day01/input.txt', 'utf-8').split("\n").map(measurement => parseInt(measurement));
 function countDepthIncreases(depths) {
     let count = 0;
     depths.forEach((depth, index) => {
@@ -9,3 +11,4 @@ function countDepthIncreases(depths) {
     return count;
 }
 exports.countDepthIncreases = countDepthIncreases;
+console.log(countDepthIncreases(puzzleInput));
