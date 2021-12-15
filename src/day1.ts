@@ -1,3 +1,9 @@
-export function countDepthIncreases(depth1: number, depth2: number): number {
-  return (depth1 < depth2 ? 1 : 0)
+export function countDepthIncreases(depths: number[]): number {
+  let count = 0
+  
+  depths.forEach((depth, index) => {
+    depth < depths[index + 1] ? count += 1 : count
+  })
+
+  return count
 }
