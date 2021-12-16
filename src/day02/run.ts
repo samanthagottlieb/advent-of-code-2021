@@ -1,3 +1,7 @@
+import { readFileSync } from 'fs';
+
+const puzzleInput = readFileSync(__dirname + "/../../data/day02/input.txt", "utf-8").split("\n");
+
 export function calculatePositionProduct(course: string[]): number {
   let horizontalPosition = 0
   let depth = 0
@@ -16,3 +20,5 @@ export function calculatePositionProduct(course: string[]): number {
 
   return horizontalPosition * depth
 }
+
+console.log(calculatePositionProduct(puzzleInput))
