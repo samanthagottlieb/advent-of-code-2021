@@ -13,3 +13,9 @@ describe("count the number of times a depth measurement increases", () => {
     expect(countDepthIncreases([199, 203, 200])).toBe(1);
   })
 });
+
+describe("count the number of times the sum of depths in a three-measurement sliding window increases", () => {
+  it("should return 1 when the four measurements are 199, 200, 209, 210 ", () => {
+    expect(countDepthIncreases([199, 200, 209, 210], 3)).toBe(1);
+  })
+});
