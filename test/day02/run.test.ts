@@ -4,4 +4,8 @@ describe("calculate the product of the horizontal position and depth you would h
   it("should return 6 when the course is horizontal 2, down 3", () => {
     expect(calculatePositionProduct(["forward 2", "down 3"])).toBe(6);
   });
+
+  it("should return 5 when the course is horizontal 2, down 3, up 1", () => {
+    expect(calculatePositionProduct(["forward 2", "down 3", "up 1"])).toBe(4);
+  });
 });

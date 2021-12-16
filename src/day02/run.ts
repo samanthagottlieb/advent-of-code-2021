@@ -9,6 +9,8 @@ export function calculatePositionProduct(course: string[]): number {
       horizontalPosition += parseInt(direction[1]);
     } else if (direction[0] == "down") {
       depth += parseInt(direction[1])
+    } else if (direction[0] == "up") {
+      depth -= parseInt(direction[1])
     }
   });
 
