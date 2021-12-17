@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calculatePowerConsumption = void 0;
+const fs_1 = require("fs");
+const puzzleInput = (0, fs_1.readFileSync)(__dirname + "/../../data/day03/input.txt", "utf-8").split("\n");
 function calculatePowerConsumption(diagnosticReport) {
     let gammaRateBinary = "";
     let epsilonRateBinary = "";
@@ -34,3 +36,4 @@ function calculatePowerConsumption(diagnosticReport) {
     return powerConsumption;
 }
 exports.calculatePowerConsumption = calculatePowerConsumption;
+console.log(calculatePowerConsumption(puzzleInput));

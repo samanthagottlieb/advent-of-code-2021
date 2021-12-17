@@ -1,3 +1,7 @@
+import { readFileSync } from 'fs';
+
+const puzzleInput = readFileSync(__dirname + "/../../data/day03/input.txt", "utf-8").split("\n");
+
 export function calculatePowerConsumption(diagnosticReport: string[]): number {
   let gammaRateBinary = ""
   let epsilonRateBinary = ""
@@ -36,3 +40,5 @@ export function calculatePowerConsumption(diagnosticReport: string[]): number {
 
   return powerConsumption
 }
+
+console.log(calculatePowerConsumption(puzzleInput));
