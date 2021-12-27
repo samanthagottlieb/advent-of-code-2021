@@ -7,13 +7,10 @@ export function calculatePowerConsumption(diagnosticReport: string[]): number {
   let epsilonRateBinary = ""
   let bits: string[][] = []
 
-  for (let x = 0; x < 12; x++) {
-    bits.push([])
-  }
-
   diagnosticReport.forEach(reportElement => {
     let elementArray = [...reportElement]
     elementArray.forEach((bit, index) => {
+      (!bits[index]) && bits.push([])
       bits[index].push(bit)
     })
   })
